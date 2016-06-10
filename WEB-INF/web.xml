@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	metadata-complete="false" version="3.1">
+
+	<servlet>
+		<servlet-name>FastCGI</servlet-name>
+		<servlet-class>org.eclipse.jetty.fcgi.server.proxy.FastCGIProxyServlet</servlet-class>
+		<init-param>
+			<param-name>scriptRoot</param-name>
+			<param-value>x:/testsite</param-value>
+		</init-param>
+		<init-param>
+			<param-name>proxyTo</param-name>
+			<param-value>http://localhost:9001</param-value>
+		</init-param>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet>
+		<servlet-name>default</servlet-name>
+		<servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+		<async-supported>true</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FastCGI</servlet-name>
+		<url-pattern>*.php</url-pattern>
+	</servlet-mapping>
+</web-app>
+

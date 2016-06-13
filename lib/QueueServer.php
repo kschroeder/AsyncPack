@@ -60,8 +60,8 @@ class QueueServer
         $data = $this->getCodec()->decode($contents);
         $params = [];
 
-        if (isset($data['params'])) {
-            $params = $data['params'];
+        if (isset($data['payload'])) {
+            $params = $data['payload'];
         }
         if (isset($data['callback'])) {
             $callback = explode('::', $data['callback']);

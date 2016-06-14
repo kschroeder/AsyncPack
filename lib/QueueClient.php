@@ -2,7 +2,6 @@
 
 namespace Eschrade\AsyncPack;
 
-use FuseSource\Stomp\Stomp;
 
 class QueueClient
 {

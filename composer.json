@@ -2,7 +2,7 @@
   "name": "eschrade/async_pack",
   "description": "This library is used as part of a Jetty PHP implementation with ActiveMQ.  It is largely a serialization/deserialization mechanism, using Stomp.",
   "minimum-stability": "dev",
-  "license": "ASL-2.0",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Kevin Schroeder",
